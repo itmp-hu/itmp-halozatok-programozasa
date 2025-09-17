@@ -5,7 +5,8 @@ Az ITMP Klub következő kiemelkedő képzése a hálózati technológiák moder
 Úgy érzed, a hálózati eszközök konfigurálása időigényes és monoton? Itt az alkalom, hogy felfedezd, hogyan lehet ezt a folyamatot hatékonyan automatizálni Python segítségével!  
 A nap során betekintést nyerhetsz a Netmiko könyvtár használatába, amely SSH-n keresztül teszi lehetővé hálózati eszközök programozott kezelését. Megismerkedheted a modern API-alapú konfiguráció előnyeivel, a NETCONF és RESTCONF protokollokkal, valamint a szabványos adatleíró nyelvekkel (XML, JSON, YANG).  
 Végül nem maradhat ki az Ansible, a legelterjedtebb hálózatautomatizációs eszköz, amelynek segítségével vegyes környezetekben is hatékonyan kezelheted a hálózati infrastruktúrát.  
-Az oktatást Szijjártó László mentorunk vezeti, aki szakértője a hálózati technológiáknak és automatizációs megoldásoknak. Csatlakozz hozzánk, és sajátítsd el a hálózatok programozásának korszerű eszközeit!
+A kurzus elsősorban az informatikai rendszer- és alkalmazás-üzemeltető technikusi képzésben résztvevő oktatóknak ajánlott, de minden érdeklődőt szívesen látunk, aki szeretne betekintést nyerni ebbe az izgalmas területbe.
+Az oktatást Szijjártó László mentorunk vezeti, aki kiváló szakértője a hálózati technológiáknak és automatizációs megoldásoknak. Csatlakozz hozzánk, és sajátítsd el a hálózatok programozásának korszerű eszközeit!
 
 **A továbbképzés időpontja:** 2025. szeptember 27. (szombat) 9:00-15:00
 
