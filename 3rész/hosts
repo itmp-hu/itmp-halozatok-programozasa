@@ -1,0 +1,21 @@
+[linux]
+pc0 ansible_host=192.168.0.105
+pc1 ansible_host=192.168.0.172
+
+[linux:vars]
+ansible_user=cisco
+ansible_password=cisco
+
+[routers]
+r1  ansible_host=192.168.0.103
+r2  ansible_host=192.168.0.253
+
+[routers:vars]
+ansible_user=admin
+ansible_ssh_pass=cisco
+ansible_network_os=ios
+ansible_connection=network_cli
+ansible_network_cli_ssh_type=paramiko
+ansible_become=yes
+
+

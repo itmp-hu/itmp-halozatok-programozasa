@@ -1,0 +1,10 @@
+---
+- hosts: r1
+  gather_facts: no
+  tasks:
+  - name: Configure interface settings
+    ios_config:
+      lines:
+        - description Second interface
+        - ip address 172.31.2.1 255.255.255.0
+      parents: interface Ethernet0/1

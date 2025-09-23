@@ -1,0 +1,18 @@
+---
+- name: Konfig fajl modositasa
+  hosts: all
+  become: yes
+  become_user: root
+  tasks:
+    - name: cmnd_alias beszurasa
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '^# Cmnd '
+        insertafter: '^# Cmnd '
+        line: 'Cmnd_Alias NETPROGS = /usr/bin/ip, /usr/bin/nmtui’
+    - name: cisco usernek alias adasa
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        line: 'cisco ALL=(ALL:ALL) NOPASSWD: NETPROGS'

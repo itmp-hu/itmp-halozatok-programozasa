@@ -1,0 +1,12 @@
+---
+- name: Cisco alapkonfig
+  hosts: routers
+  gather_facts: no
+  tasks:
+    - name: konfig telepitése
+      ios_config:
+        src: "~/labs/Ansible/alapkonfig.txt"
+    - name: konfig mentése
+      ios_config:
+        save_when: always
+

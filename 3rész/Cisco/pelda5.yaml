@@ -1,0 +1,17 @@
+---
+- hosts: routers
+  gather_facts: yes
+  tasks:
+    - name: Setup OSPF
+      ios_config:
+        lines:
+          - network 0.0.0.0 255.255.255.255 area 0
+          - area 0 authentication
+          - auto-cost reference-bandwidth 1000
+        parents: router ospf 1
+    - name: Advertise default route
+      ios_config:
+        lines:
+          - default-information originate
+        parents: router ospf 1
+      when: "{{ ansible_net_hostname == 'r1' }}"

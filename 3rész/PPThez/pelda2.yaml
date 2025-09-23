@@ -1,0 +1,11 @@
+---
+- name: File-ok kimasolasa a gepekre
+  hosts: linux
+  become: yes
+  become_user: root
+  tasks:
+    - name: file masolasa
+      copy:
+        src: /home/devasc/forras.txt
+        dest: /home/cisco/forras.txt
+

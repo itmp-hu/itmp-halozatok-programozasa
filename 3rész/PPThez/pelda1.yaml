@@ -1,0 +1,12 @@
+---
+- hosts: routers
+  gather_facts: no
+  tasks:
+    - name: show version
+      cisco.ios.ios_command:
+        commands: show version
+      register: kimenet
+    - name: kiirás
+      debug:
+        var: kimenet
+

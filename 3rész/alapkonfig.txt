@@ -1,0 +1,7 @@
+no service dhcp
+service password-encryption
+line con 0
+ password titok
+ login
+
+

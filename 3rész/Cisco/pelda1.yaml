@@ -1,0 +1,14 @@
+---
+- hosts: routers
+  gather_facts: no
+  tasks:
+    - name: run sh version and sh clock
+      ios_command:
+        commands:
+          - show version
+          - show clock
+      register: kimenet
+    - name: print output
+      debug:
+        msg: “{{ kimenet.stdout_lines }}”
+

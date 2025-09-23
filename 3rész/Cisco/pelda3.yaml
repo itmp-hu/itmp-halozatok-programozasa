@@ -1,0 +1,10 @@
+---
+- hosts: routers
+  gather_facts: no
+  tasks:
+    - name: Create a new user
+      ios_user:
+        name: ansible
+        configured_password: titok123
+        privilege: 5
+        state: present

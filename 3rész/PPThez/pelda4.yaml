@@ -1,0 +1,19 @@
+---
+- name: Make users
+  hosts: all
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: Making users
+      user:
+        name: "{{ item }}"
+        group: users
+        password: '$5$uLm2j7pL7yP$5o6BSUvNoyqmCfUlLmyK0T5mboF3P1O3x93wHOgbH7C'
+        shell: /bin/bash
+        comment: User "{{ item }}"
+      loop:
+        - tercsi
+        - fercsi
+        - kata
+        - klara
+
