@@ -223,7 +223,7 @@ Tesztelés a kliensen:
 curl -k https://router.ip.cime/restconf/ -u "cisco:cisco123!"
 ```
 
-## Első példa: router állomásnevének lekérdezése
+## 1. példa: router állomásnevének lekérdezése
 
 1. Meg kell keresnünk a megfelelő YANG adatmodellt. Ehhez jól használható online eszköz a yangcatalog.com weboldal: https://yangcatalog.org/yang-search/module_details
 
@@ -294,7 +294,7 @@ Gyakorló példaként kérdezzünk le egyéb adatokat is, pl.:
 - felhasználók nevei
 - interfészek neve és leírása
 
-## Második példa: router állomásnevének átállítása
+## 2. példa: router állomásnevének átállítása
 
 A program nagyrészt egyezik az előzővel, csak a GET utasítás helyett PATCH-et használunk, és megfelelő formátumban el kell küldeni a módosítandó adatot is:
 
@@ -303,7 +303,8 @@ import json
 import requests
 requests.packages.urllib3.disable_warnings()
 url = "https://192.168.122.232/restconf/data/Cisco-IOS-XE-native:native/hostname"
-myheaders = { "Accept": "application/yang-data+json","Content-type":"application/yang-data+json" }
+myheaders = { "Accept": "application/yang-data+json",
+              "Content-type":"application/yang-data+json" }
 myauth = ("cisco", "cisco123!")
 resp = requests.get(url, auth=myauth, headers=myheaders, verify=False)
 akt_hostnev = resp.json()["Cisco-IOS-XE-native:hostname"]
@@ -314,7 +315,7 @@ resp = requests.patch(url, auth=myauth, headers=myheaders, data=json.dumps(yang_
 print(resp.status_code)
 ```
 
-## Harmadik példa: loopback interfész létrehozása
+## 3. példa: loopback interfész létrehozása
 
 Egy új objektum létrehozásához ismét új metódust kell használni (POST), és a megfelelő adatokat átadni. A program első felében bekérjük az interfész paramétereit:
 
@@ -324,7 +325,8 @@ import requests
 requests.packages.urllib3.disable_warnings()
 
 url = "https://192.168.122.232/restconf/data/Cisco-IOS-XE-native:native/interface"
-myheaders = { "Accept": "application/yang-data+json","Content-type":"application/yang-data+json" }
+myheaders = { "Accept": "application/yang-data+json",           
+              "Content-type":"application/yang-data+json" }
 myauth = ("cisco", "cisco123!")
 
 NEV = input("Interfész sorszáma: ")
@@ -353,7 +355,7 @@ resp = requests.post(url, auth=myauth, headers=myheaders, data=json.dumps(data),
 print(resp.status_code)
 ```
 
-## Negyedik példa: loopback interfész törlése
+## 4. példa: loopback interfész törlése
 
 Az előző példában létrehozott interfészt töröljük a DELETE metódussal:
 
