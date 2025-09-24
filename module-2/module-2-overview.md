@@ -30,7 +30,7 @@ Tehát az **API olyan szoftver, amely lehetővé teszi, hogy más alkalmazások 
 
 Az API hasonló a pincérhez egy étteremben. A vendég azt szeretné, hogy az ételt az asztalára szállítsák. Az ételt a konyhán főzik és készítik el. A pincér a közvetítő, hasonlóan egy API-hoz. A pincér (az API) az a személy, aki felveszi az ügyfél rendelését (a kérést), és megmondja a konyhának, hogy mit kell tennie. Amikor az étel elkészült, a pincér szolgálja fel az ételt (a választ) a vásárlónak.
 
-KÉP
+![API](./assets/images/api.png)
 
 A hálózatprogramozásnál egy általunk **írt program kommunikál a hálózati eszköz API-jával**, szabványos módon - adatformátumban - **kérve** tőle bizonyos funkciókat (pl. konfigurációs adatok lekérdezése, módosítása), amire **az eszköz elvégzi a műveletet**, és szintén szabványos adatformátumban **információt szolgáltat**.
 
@@ -41,7 +41,7 @@ A modern hálózati eszközök tipikusan a REST API-t használják (REpresentati
 - A **reprezentáció** azt jelenti, hogy egy erőforrás reprezentációját (leírását) egy szerver és egy kliens között továbbítjuk. Ehhez a megjelenítéshez szabványos adatformátumot használunk, általában JSON-t vagy XML-t.
 - Az **állapotátvitel** azt jelenti, hogy minden REST API-val végzett művelet önálló. Minden kérés hordoz (átküld) minden információt (állapotot) a művelet befejezéséhez.
 
-KÉP
+![REST API](./assets/images/restapi.png)
 
 A REST API HTTP-üzeneteket (metódusokat) használ a hálózati eszköz és egy másik alkalmazás közötti információk küldésére és fogadására.
 
@@ -78,7 +78,7 @@ Nézzük a következő példát! Egy cég ügyféladatbázisát a http://ceg.hu/
 
 A hálózatprogramozásban hasonló dolgot csinálunk, mint a weboldal böngészése, csak ezúttal nem weboldalt vagy képet kérünk, hanem egy adott objektumot az eszköztől, például egy listát a hálózat összes VLAN-járól.
 
-KÉP
+![HTTP methods](./assets/images/HTTP_methods.png)
 
 Amikor az eszköz megkapja pl. a HTTP GET-kérést, egy HTTP GET-választ küld a kért információkkal. Ezeket az információkat közös **adatformátum**ban szállítjuk.
 A két leggyakrabban használt adatformátum a következő:
@@ -114,7 +114,7 @@ Különféle műveleteink vannak, például a <get-config> a konfiguráció lek�
 
 A műveleteket távoli eljáráshívásként (RPC) hajtjuk végre. Ezt az <rpc> és az <rpc-reply> címkék segítségével ismerhetjük fel.
 
-KÉP
+![XML](./assets/images/xml.png)
 
 ### RESTCONF
 
@@ -122,7 +122,7 @@ A RESTCONF egy olyan protokoll, amely a REST API-hoz hasonlóan működik. HTTPS
 
 A RESTCONF újabb, mint a NETCONF, de nem helyettesíti azt. Ez inkább egy másik (könnyebb) lehetőség a REST API-kat ismerő mérnökök számára.
 
-KÉP
+![RESTCONF](./assets/images/restconf.png)
 
 ### YANG
 
@@ -141,7 +141,7 @@ Ezek az adatmodellek egységes módon teszik lehetővé a hálózati eszközök 
 
 A YANG az XML adatformátumhoz hasonló hierarchikus fastruktúrát használ. Világos különbséget tesz a konfigurációs adatok és az állapotinformációk között.
 
-KÉP
+![YANG](./assets/images/yang.png)
 
 ### A RESTCONF URL
 
@@ -169,7 +169,7 @@ Előfordul, hogy több modulban is megtaláljuk a minket érdeklő adatokat (pl.
 
 Az adatmodell kiválasztása után össze kell állítani a RESTCONF URL-t, amin keresztül elérjük a kívánt beállítást (hasonlóan egy weboldal URL-jéhez)
 
-KÉP
+![RESTCONF URL](./assets/images/restconf_url.png)
 
 ### A laboreszközök elérhetősége
 

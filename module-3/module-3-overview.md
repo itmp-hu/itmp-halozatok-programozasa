@@ -160,7 +160,7 @@ look_for_keys = False	      # nem próbálja az SSH kulcsos bejelentkezést
 
 Az alábbi labortopológiát használjuk a CML-ben:
 
-KÉP
+![Labortopológia](./assets/images/labortopologia.png)
 
 ## Egyszerű parancsok kiadása: ad-hoc mód
 
