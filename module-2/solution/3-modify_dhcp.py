@@ -1,15 +1,19 @@
 import json
 import requests
 requests.packages.urllib3.disable_warnings()
+# A DHCP pool-ok listában vannak definiálva a YANG adatmodellben.
+# Adott pool-ra a neve alapján tudunk hivatkozni, ez a kulcs:
 url = "https://192.168.122.150/restconf/data/Cisco-IOS-XE-native:native/ip/dhcp/pool=POOL1"
 fejlec = { "Accept": "application/yang-data+json","Content-type":"application/yang-data+json" }
 auth = ("admin", "cisco")
 
 output = requests.get(url, auth=auth, headers=fejlec, verify=False)
+# ha nincs kivételkezelés, a következő sor hibát okoz:
 print(json.dumps(output.json(), indent=4))
 
-# uj DNS szerver:
+# új DNS szerver adatait adjuk meg a pool-on belül:
 url = "https://192.168.122.150/restconf/data/Cisco-IOS-XE-native:native/ip/dhcp/pool=POOL1/dns-server"
+# a módosítandó adatokat többsoros szövegként is megadhatjuk:
 payload = '''
 {
     "Cisco-IOS-XE-dhcp:dns-server": {
@@ -23,11 +27,12 @@ payload = '''
 output = requests.put(url, auth=auth, headers=fejlec, data=payload, verify=False)
 print(output.status_code)
 
-# masik domain név
+# másik domain név megadása, ezt interaktívan kérjük be:
 url = "https://192.168.122.150/restconf/data/Cisco-IOS-XE-native:native/ip/dhcp/pool=POOL1/domain-name"
 d = input("Új domain: ")
 payload = {
     "domain-name": d
 }
+# a payload változót a PATCH metódus meghívásakor is átalakíthatjuk JSON formátumra:
 response = requests.patch(url, headers=fejlec, auth=auth, data=json.dumps(payload), verify=False)
 print(response.status_code)
