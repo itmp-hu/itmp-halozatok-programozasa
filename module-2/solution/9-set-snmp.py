@@ -9,6 +9,8 @@ fejlec = { "Accept": "application/yang-data+json",
            "Content-type":"application/yang-data+json" }
 auth = ("admin", "cisco")
 
+# A native modul nem tartalmazza a szükséges beállításokat, hanem szükség van a Cisco-IOS-XE-snmp modulra is, mint kibővítés (augment).
+# Egyszerűsítésként állítsuk be előzetesen manuálisan az SNMP-t, kérdezzük le a fenti URL segítségével, és ebből vehetjük, hogy kell kinéznie az elküldendő adatoknak:
 adat = '''
 {
   "Cisco-IOS-XE-native:snmp-server": {
@@ -28,7 +30,6 @@ adat = '''
 '''
 output = requests.put(url, headers=fejlec, data=adat, auth=auth, verify=False)
 print(output.status_code)
-
 
 output = requests.get(url, headers=fejlec, auth=auth, verify=False)
 print(output.text)
