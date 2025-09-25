@@ -1,7 +1,7 @@
 # 3. modul workshop - Hálózatprogramozás és automatizáció
 
 
-1.) ...
+1.) Készítsünk el egy adott könyvtárat, de csak ha a "cisco" felhasználó létezik!
 
 <details>
 <summary style="border-left: 2px solid lightgray; padding: 5px; font-style:italic">A feladat részletes megoldása</summary>
