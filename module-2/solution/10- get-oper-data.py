@@ -7,6 +7,7 @@ PASS = 'cisco'
 # disable warnings from SSL/TLS certificates
 requests.packages.urllib3.disable_warnings()
 
+# kiválasztjuk a megfelelő YANG modult, és a segítségével a keresett interfészt, majd lekérdezzük:
 url = "https://192.168.122.150/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=GigabitEthernet1"
 
 headers = {
