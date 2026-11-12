@@ -11,7 +11,7 @@ Az oldalra belépve a bal oldali “My downloads” kategóriára klikkelve megj
 (az első lépések megtételében segítséget nyújt az Infotanárium [2025. januári előadása](https://infotanarium.hu/archivum/39))
 - DEVASC virtuális gép
 - CSR1000v virtuális router
-Az utóbbiak letölthetők a képzéshez kapcsolódó [Google Drive tárhelyről](https://shorturl.at/TBai1). 
+Az utóbbiak letölthetők a képzéshez kapcsolódó [Google Drive tárhelyről](https://drive.google.com/drive/folders/1utsFTj1P94MJ6Mzddn_3q_tbcp5NRLdG?usp=sharing). 
 
 ## Előzetes teendők:
 A VMware Workstation telepítése után töltsük le a három virtuális gép OVA fájlját, valamint az ISO fájlt. A <b>File/Open...</b> menüpont segítségével importáljuk be elsőként a DEVASC (a DevNet Associate kurzushoz illeszkedő), 
